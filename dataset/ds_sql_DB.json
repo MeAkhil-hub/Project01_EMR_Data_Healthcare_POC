@@ -1,0 +1,27 @@
+{
+	"name": "ds_sql_DB",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_SQL_DB",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"database": {
+					"value": "@dataset().database",
+					"type": "Expression"
+				}
+			}
+		},
+		"parameters": {
+			"database": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "",
+			"table": "patients"
+		}
+	}
+}
