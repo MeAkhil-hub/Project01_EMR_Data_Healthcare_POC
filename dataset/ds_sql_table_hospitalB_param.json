@@ -1,18 +1,15 @@
 {
-	"name": "ds_sql_DB",
+	"name": "ds_sql_table_hospitalB_param",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ls_SQL_DB",
 			"type": "LinkedServiceReference",
 			"parameters": {
-				"database": {
-					"value": "@dataset().database",
-					"type": "Expression"
-				}
+				"database": "dbcourseproject01-hospitalB"
 			}
 		},
 		"parameters": {
-			"database": {
+			"tableName": {
 				"type": "string"
 			}
 		},
@@ -20,8 +17,10 @@
 		"type": "AzureSqlTable",
 		"schema": [],
 		"typeProperties": {
-			"schema": "",
-			"table": "transactions"
+			"table": {
+				"value": "@dataset().tableName",
+				"type": "Expression"
+			}
 		}
 	}
 }
